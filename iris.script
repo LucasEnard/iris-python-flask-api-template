@@ -13,7 +13,7 @@
  zn "USER"
 
  do ##class(%Library.EnsembleMgr).EnableNamespace("USER",1)
- do $SYSTEM.SQL.Schema.ImportDDL("/irisdev/app/Sample.sql","/irisdev/app/sql.log","IRIS")
+ do $SYSTEM.SQL.Schema.ImportDDL("/irisdev/app/Sample.sql","/tmp/sql.log","IRIS")
 
  zpm "install pex-embbeded-python" 
  
@@ -21,7 +21,6 @@
  zw ##class(Grongier.PEX.Utils).RegisterComponent("bo","CrudPerson","/irisdev/app/src/python/person/",1,"Python.CrudPerson")
 
  do $System.OBJ.LoadDir("/irisdev/app/src/ObjectScript","cubk","*.cls",1)
- do $System.OBJ.LoadDir("/irisdev/app/src/Sample","cubk","*.cls",1)
 
  set ^EnsPortal.Settings("SuperUser","LastProduction")	= "Python.Production"
 

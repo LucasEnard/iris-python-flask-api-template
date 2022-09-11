@@ -37,7 +37,7 @@ It is to be noted that the table Sample.Person was already created in advance fo
 CREATE TABLE Sample.Person (
 
          Company                                  VARCHAR(50),
-         DOB                                      TIMESTAMP,
+         DOB                                      DATE,
          Name                                     VARCHAR(4096),
          Phone                                    VARCHAR(4096),
          Title                                    VARCHAR(50)
@@ -56,7 +56,7 @@ $ git clone https://github.com/grongierisc/iris-python-flask-api-template.git
 Open the terminal in this directory and run:
 
 ```
-$ docker-compose up -d --build
+$ DOCKER_BUILDKIT=1 docker-compose up -d --build
 ```
 ## 3.2. Management Portal and VSCode
 

@@ -13,7 +13,6 @@ class FlaskService(BusinessService):
         return 
 
     def on_process_input(self,request):
-        res = self.send_request_sync(self.target,request)
-        return res
+        return self.send_request_sync(self.target,request)
 
  
